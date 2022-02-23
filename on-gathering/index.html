@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
+    <title>Mirrors</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        div{
+            padding: 5px;
+            display: inline-block;
+
+        }
+        
+        table{
+          border: 1px solid black;
+        }
+        
+        td{
+
+        }
+        
+
+        
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  <script defer>
+    let app = document.getElementById("app");
+    let s = new Sheets("1d7Xc58fnzojWMfrIQpDAoKGSt1kMZ1Y6zqGTv5dLRBQ");
+    s.getMyData().then((d) => {
+      // fetch for data in a specific row
+      let heading = s.getKey("Meta-Title");
+      // Create an element and append to selector
+      s.createElement({
+        tag: "h1",
+        content: heading,
+      }).appendTo("#app");
+      // Create an element and append to selector
+      let descriptions = s.getKey("Meta-Description");
+      s.createElement({
+        tag: "p",
+        content: descriptions,
+      }).appendTo("#app");
+      // Create an element and append to selector
+      let about = s.getKey("About");
+      s.createElement({
+        tag: "p",
+        content: about,
+      }).appendTo("#app");
+
+      // Collapse rows into an array of object for easy looping
+      let ul = s.collapseKeys("Title", "Creator", "Media", "Year", "Location");
+      for (let row of ul) {
+        s.createElement({
+          tag: "div",
+
+          //class name?
+          //ask alvin how to add class selector
+          
+          children: [
+            {
+              tag: "p",
+              content: row["Title"],
+            },
+            // {
+            //   tag: "",
+            //   attributes: {
+            //     src: row["Creator"],
+            //   },
+            // },
+            {
+              tag: "p",
+              content: row["Media"],
+            },
+            {
+              tag: "p",
+              content: row["Year"],
+            },
+            {
+              tag: "p",
+              content: row["Location"],
+            },
+          ],
+        }).appendTo("#app");
+      }
+    });
+  </script>
+</html>

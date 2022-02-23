@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/gh/alvinashiatey/Sheets@latest/dist/sheets.umd.min.js"></script>
+    <title>Green Tea
+
+    </title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body{
+            margin: 0 auto;
+            font-family: "Times New Roman", serif;
+         
+        }
+
+        nav{
+            width: 98%;
+            display: flex;
+            flex-direction: row;
+        	justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+
+        .mark img{
+            width: 100px;
+            padding-left: 10px;
+        }
+
+        nav a{
+            display: block;
+            text-align: right;
+            }
+
+        
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 20px;
+
+        }
+
+        .circle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 260px;
+            width: 260px;
+            margin-top: 20px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid black;
+            transition: 2s ease-in-out;
+        }
+
+        .text{
+            display: block;
+            transition: 1s ease-in-out;
+            opacity: 0;
+            width: 200px;
+            
+        
+        }
+
+        .text:hover{
+            opacity: 1;
+        }
+
+        .circle.gradient{
+            background: rgb(0,255,132);
+            background: radial-gradient(circle, rgba(0,255,132,1) 0%, rgba(232,138,0,1) 29%, rgba(188,151,115,0.8603816526610644) 67%, rgba(70,96,252,0.45702030812324934) 100%);
+        }
+        .circle.gradient-green{
+            background: rgb(116,255,101);
+            background: radial-gradient(circle, rgba(116,255,101,1) 0%, rgba(0,107,22,1) 50%, rgba(0,80,10,0.45702030812324934) 100%);
+        }
+
+        
+    </style>
+
+  </head>
+
+  <body>
+    <nav>
+            <div class="mark"><img src="_assets/mark.png"></div>
+            <div>Hover over a full teacup to reveal the tea read.</div>
+    </nav>
+
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle gradient-green"><p class="text">Green Tea...seriously smells like the houses I used to party in in high school/college...a little like weed, a little like cigarettes. dirty, tastes better than it smells. <br> 2.18 3:15pm</p></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle gradient"><p class="text">Tastes like an evening spent in a farmhouse roasting orange peels on a wood burning stove. Citusy, plasticy, a little like grass + dead trees. Sweet like the memory of a crush before it turned sour. <br>2.17 9:25pm</b4></p></div>
+        <div class="circle gradient"><p class="text">Reminds me of the only tea I had in my apartment during the coldest winter I'd ever experienced with windchills of -37 degrees. A bright sharp citrus that clashed with the bitter cold. <br> 2.19 8:12pm</p></div>
+        <div class="circle gradient"><p class="text">Having a hot shower, coming to the Atrium, having this nice cup of tea. Hope getting all of my work done today :) <br> 2.18 12pm</p></div>
+
+    </div>
+  
+  
+  
+  
+
+  
