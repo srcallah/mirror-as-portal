@@ -11,7 +11,7 @@ function init() {
     camera.position.z = -100;
     camera.position.y = -100;
     // 
-    var imgs = textToTexture("The mirror is a portal");
+    var imgs = textToTexture("Mirror is a portal");
     var texture = new THREE.CubeTextureLoader().load(imgs);
     texture.mapping = THREE.CubeRefractionMapping;
 
@@ -88,7 +88,7 @@ function textToTexture(text) {
     canvas.height = tile_size;
     // 
     var ctx = canvas.getContext('2d');
-    ctx.font = fontSize + "px Rubik Mono One, Helvetica";
+    ctx.font = fontSize + "px Glossy Display, Helvetica";
     var fillColor = colors[Math.floor(Math.random()*colors.length)];
     document.body.style.backgroundColor = fillColor;
     ctx.fillStyle = fillColor;
