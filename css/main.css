@@ -103,21 +103,27 @@ textarea {
 body{
   font-family: sans-serif;
   font-weight: 200;
+  margin: 0;
 }
 
-#bg {
-/* 	
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	z-index: 1;
+#flashlight,
+#flashlight-reflection {
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.95);
 	position: absolute;
-	left: 0;
-	top: 0; */
-	/* width: 100%;
-	height: 100vh; */
+	top: 50px;
+	left: 50px;
+	border-radius: 50%;
 }
+
+#flashlight-reflection {
+  left: auto;
+  right: 50px;
+  background-image: url('');
+  
+}
+
 
 .intro{
   height: 100vh;
@@ -126,7 +132,6 @@ body{
   justify-content: center;
   background: rgb(233,231,231);
   background: linear-gradient(0deg, rgba(233,231,231,1) 0%, rgba(255,255,255,1) 100%);
- 
 }
 
 .intro h1, .intro h2{
@@ -134,9 +139,15 @@ body{
   font-weight: light;
   font-style: italic;
   color: red;
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
+  line-height: 1.5;
+  max-width: 1000px;
+}
 
+.intro a{
+  text-decoration-style: dotted;
+  color: red;
 }
 
 

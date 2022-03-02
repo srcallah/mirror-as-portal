@@ -11,36 +11,48 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Place favicon.ico in the root directory -->
 
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.css">
+<style>
+ 
 
+#container {
+	width: 100vw;
+	height: 100vh;
+	background: grey;
+	margin: 0 auto;
+	position: relative;
+  overflow: hidden;
+}
+
+#flashlight,
+#flashlight-reflection {
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	border-radius: 50%;
+}
+
+#flashlight-reflection {
+  left: auto;
+  right: 50px;
+  background-image: url('');
+  
+}
+</style>
 </head>
 
 <body>
-    <!-- Add your site or application content here -->
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/plugins.js"></script>
+<div id="container">
+	<div id="flashlight"></div>
+  <div id="flashlight-reflection"></div>
+  <section>test</section>
+  <section>test2</section>
+</div>
 
-  
-        <header class="intro">
-          <h1>Mirrors are used as a symbol for portals and their convergence—mirror as portal—occurs at the junction between ordinary and <a href="#">nonordinary realities</a>. The bridging has theoretical and methodological implications for <a href="#">art</a>, <a href="#">technology</a> and <a href="#">ritual.</a></h1>
-        </header>
-
-        <div id="container">
-          <div id="flashlight"></div>
-            <div id="flashlight-reflection"></div>
-            <section class="map">
-              <h2>Map goes here</h2>
-            </section>
-        </div>
-       
-      
-      
-    
-  
-  <script>
+<script>
     const container = document.getElementById("container");
 const bounds = container.getBoundingClientRect();
 const flashlight = document.getElementById("flashlight");
@@ -63,8 +75,4 @@ container.addEventListener("mousemove", moveFlashlight);
 
 
 </script>
-
-
 </body>
-
-</html>

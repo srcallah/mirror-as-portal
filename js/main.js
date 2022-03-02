@@ -4,7 +4,7 @@ var mouseX = 0, mouseY = 0;
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
-var colors = ["#ffffff","#Ff0000"];
+var colors = ["#ffffff","#000000"];
 
 function init() {
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
@@ -88,7 +88,7 @@ function textToTexture(text) {
     canvas.height = tile_size;
     // 
     var ctx = canvas.getContext('2d');
-    ctx.font = fontSize + "px Glossy Display, Sans-Serif";
+    ctx.font = fontSize + "px cursive, Sans-Serif";
     var fillColor = colors[Math.floor(Math.random()*colors.length)];
     document.body.style.backgroundColor = fillColor;
     ctx.fillStyle = fillColor;
@@ -126,3 +126,4 @@ function textToTexture(text) {
 
 init();
 animate();
+
