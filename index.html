@@ -18,51 +18,44 @@
 
 <body>
     <!-- Add your site or application content here -->
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/plugins.js"></script>
 
-  
+        <nav>
+          <!--Orb canvas here-->
+          <button><a href="#">Enter</a></button>
+        </nav>
+        
+
+
         <header class="intro">
           <h1>Mirrors are used as a symbol for portals and their convergence—mirror as portal—occurs at the junction between ordinary and <a href="#">nonordinary realities</a>. The bridging has theoretical and methodological implications for <a href="#">art</a>, <a href="#">technology</a> and <a href="#">ritual.</a></h1>
         </header>
-
-        <div id="container">
-          <div id="flashlight"></div>
-            <div id="flashlight-reflection"></div>
-             <section class="map">
+        
+        <section class="map">
           <h2>Map goes here</h2>
+          
+          <div class="figure" id="m1">
+          <a href="#">
+            <img class="image-main" src="_assets/Mirror vectors_html_birds2-01.png" >
+            <img class="image-hover" src="_assets/Mirror vectors_html_birds2-02.png">
+          </a>
+          </div>
+
+          <div class="figure" id="m2">
+          <a href="#">
+            <img class="image-main" src="_assets/EgyptianMirror-01.png" >
+            <img class="image-hover" src="_assets/EgyptianMirror-02.png">
+
+          </a>
+          </div>
         </section>
         </div>
        
-      
-      
-    
-  
-  <script>
-    const container = document.getElementById("container");
-const bounds = container.getBoundingClientRect();
-const flashlight = document.getElementById("flashlight");
-const flashlightReflection = document.getElementById("flashlight-reflection");
+        <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+        <script src="js/three.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/plugins.js"></script>
 
-// set the position of the light to the cursor
-function moveFlashlight(e) {
-  // get mouse coordinates relative to parent
-	const x = e.clientX - bounds.left;
-	const y = e.clientY - bounds.top;
-	flashlight.style.left = `${x - 20}px`;
-	flashlight.style.top = `${y - 20}px`;
-  // move the reflection
-  flashlightReflection.style.right = flashlight.style.left;
-  flashlightReflection.style.top = flashlight.style.top;
-}
-
-// listen for mouse movement
-container.addEventListener("mousemove", moveFlashlight);
-
-
-</script>
+   
 
 
 </body>

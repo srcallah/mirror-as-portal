@@ -1,0 +1,62 @@
+body{
+    margin: 50px;
+}
+
+
+table {
+    overflow:hidden;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  
+  tbody tr:hover {
+    transition: .1s ease-in-out;
+  }
+  
+  td, th {
+    position: relative;
+    padding: 6px 4px;
+    border-bottom: 1px solid black;
+  }
+
+  th{
+    cursor: pointer;
+  }
+  
+  tbody tr:hover::after {
+    content: "";
+  }
+
+  td:hover::after,
+  th:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+tr.h-lime:hover{
+    background-color: lime;
+}
+
+tr.h-orchid:hover{
+    background-color: orchid;
+}
+tr.h-red:hover{
+    background-color: red;
+    color: white;
+}
+
+tr.h-yellow:hover{
+    background-color: gold;
+}
+
+tr.h-blue:hover{
+  background-color: mediumblue;
+  color: white;
+}
+

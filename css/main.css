@@ -6,6 +6,7 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 
  @font-face {
    font-family: "Glossy Display";
@@ -20,6 +21,8 @@
   font-style: italic;
   font-weight: 100;
 }
+
+
 
 
 /* ==========================================================================
@@ -106,22 +109,45 @@ body{
   margin: 0;
 }
 
-#flashlight,
-#flashlight-reflection {
-	width: 40px;
-	height: 40px;
-	background-color: rgba(255, 255, 255, 0.95);
-	position: absolute;
-	top: 50px;
-	left: 50px;
-	border-radius: 50%;
+nav{
+  background: rgb(190,63,251);
+  background: radial-gradient(circle, rgba(190,63,251,1) 0%, rgba(221,70,252,0.3435749299719888) 100%) ;
+
 }
 
-#flashlight-reflection {
-  left: auto;
-  right: 50px;
-  background-image: url('');
-  
+.enter{
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+button{
+  position: absolute;
+  background-color: transparent;
+  bottom: 10px;
+  right: 42%;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 17px;
+  width: 250px;
+  font-family: Glossy Display;
+  font-size: 32pt;
+
+
+}
+
+button a{
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+
+div.arrow{
+  background-color: yellow;
+  text-align: center;
+  padding: 30px;
 }
 
 
@@ -134,11 +160,17 @@ body{
   background: linear-gradient(0deg, rgba(233,231,231,1) 0%, rgba(255,255,255,1) 100%);
 }
 
+h1{
+  font-family: "Glossy Display", sans-serif;
+  font-weight: light;
+  font-style: italic;
+}
+
 .intro h1, .intro h2{
   font-family: "Glossy Display", sans-serif;
   font-weight: light;
   font-style: italic;
-  color: red;
+  color: orchid;
   font-size: 40px;
   text-align: center;
   line-height: 1.5;
@@ -149,6 +181,39 @@ body{
   text-decoration-style: dotted;
   color: red;
 }
+
+.figure {
+  margin: 1em;
+  position: relative;  
+  /* background-color: rgb(186, 252, 3); */
+  width: 300px;
+}
+
+.figure .image-main{
+  filter: drop-shadow(2px 10px 12px rgb(10, 10, 10));
+}
+
+.figure img{
+  max-width: 300px;
+}
+
+.figure img.image-hover {
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+object-fit:unset;
+opacity: 0;
+transition: opacity 1s;
+}
+.figure:hover img.image-hover {
+opacity: 1;
+}
+.figure:hover img.image-main {
+opacity: 0;
+}
+
 
 
 /* ==========================================================================
@@ -324,4 +389,6 @@ body{
     page-break-after: avoid;
   }
 }
+
+
 
