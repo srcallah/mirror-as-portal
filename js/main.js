@@ -5,7 +5,7 @@ var mouseX = 0, mouseY = 0;
 var windowHalfX = window.innerWidth / 2;
 var windowHalfY = window.innerHeight / 2;
 
-var colors = ["orchid", "#ffffff", "lime", "red", "gold", "mediumblue"];
+var colors = ["#ffffff", "#000000"];
 
 function init() {
     camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 10000);
