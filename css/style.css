@@ -123,7 +123,7 @@ text-align: center;
 }
 
 #mirror a{
-  padding: 20px;
+  padding:20px;
 }
 
 .loaded #mirror  .item {
@@ -171,5 +171,15 @@ position: relative;
   -webkit-text-stroke: 1px white;
 }
 
+aside{
+  margin: 50px;
+
+}
+
+.num{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
 
 
