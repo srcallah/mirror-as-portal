@@ -9,81 +9,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <style>
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
 
-        body{
-  
-            background: rgb(166,173,210);
+div{
+  box-sizing:border-box;
+}
 
-            font-family: sans-serif;
-        }
+body {
+  background: #111;
+}
 
-        .text{
-            display: grid;
-            grid-template-columns: 1fr 2fr;
+.horizontal-scroll-wrapper{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  width:80px;
+  max-height:500px;
+  margin:0;
+  background:#abc;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg);
+  transform-origin: right top;
+}
 
-        }
+.squares{
+  padding:60px 0 0 0;
+}
 
-        div.body-text{
-            margin: 20px auto;
-            padding: 20px;
-            font-size: 14pt;
-            line-height: 1.5;
-            max-width: 800px;
-        }
+.squares > div{
+  width:60px;
+  height:60px;
+  margin:10px;
+}
 
-        /* #canvas{
-            position: relative;
-        } */
-
-
-        img{
-            width: 800px;
-            opacity: .5;
-            mix-blend-mode: screen;
-        }
-
-        #a{
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            z-index: 1;
-        }
-
-        #b{
-            position: absolute;
-            top: 0px;
-            left: 500px;
-            z-index: 10;
-        }
-
-        #c{
-            position: absolute;
-            top: 390px;
-            left: 650px;
-            z-index: 50;
-        }
-
-        #d{
-            position: absolute;
-            top: 200px;
-            left: 30px;
-            z-index: 15;
-        }
-
-        aside{
-            margin-top: 300px;
-        }
-
-        .num{
-        padding: 10px 15px;
-        margin: 10px;
-        border: 1px solid black;
-        border-radius: 50%;
-        }
-
-        p{
-            margin: 10px;
-        }
+.rectangles{
+  top:100px;
+  padding:100px 0 0 0;
+}
+.rectangles > div{
+  width:140px;
+  height:60px;
+  margin:50px 10px;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+}
 
 
 
@@ -93,33 +74,29 @@
 
   <body>
     
-    <div id="canvas">
-        <img src="../assets/11_Georgedelatour.jpg" class="image" id="a">
-        <img src="../assets/3_KarlBryullv.jpg" class="image" id="b">
-        <img src="../assets/23_claesz.jpg" class="image" id="c">
-        <img src="../assets/15_MelchiorreBarthel.jpg" class="image" id="d">
-    
-
-    <div class="text">
-        <aside>
-           <p><span class="num">1</span>The Penitent Magdalen, 1640</p> 
-           <p><span class="num">2</span>Melancholy, 1674</p> 
-           <p><span class="num">3</span>Vanitas Still Life with Portrait, 1628</p> 
-           <p><span class="num">4</span>Fortune Teller Svetlana, 1836</p> 
-        
-        </aside>
-
-        <div class="body-text">
-            <h1> Veritas as Immaculacy 
-            </h1>
-
-        <p>
-        Even while Vanitas art flourished, the flawless mirror as religious metaphor and symbol in Christian art from the sixteenth century onward was an attribute of the Virgin Mary, traditionally revered for her Immaculate Conception, rooted in her relationship to God; hence the term speculum sine macula (mirror without stain), widely invoked in devotional writings and art . The trope originated in the Old Testament deuterocanonical Book of Wisdom 7.26, which says of Wisdom: “She is a reflection of eternal light, a spotless mirror of the working of God, and an image of his goodness” Significantly, paintings never show the Madonna actually using the mirror. Normally others hold it beside or below her, for she is the mirror, its unblemished surface and capacity to absorb and cast back light symbolizing not only virginal immaculacy, but also and more importantly her function as a reflector of God’s glory. Raphael’s Madonna of Foligno, Murillo’s Immaculate Conception, and Tiepolo’s Immaculate Conception unambiguously illustrate that role. Thus in religious iconography, the Marian mirror tropes the perfection of God through His Son’s mother as divine exemplar. Yet it is also a mirror of human conscience, for in gazing at the ideal to which all should aspire, viewers can appraise their own conduct, engage in self-judgment, and recognize their distance from perfection. Insofar as it enjoins an introspection that can lead to self-improvement, the mirror possesses a moral function. In that sense, far from catering to vanity, it presumably catalyzes laudable aspirations. 
-        </p>
-        </div>
-
+    <div class="horizontal-scroll-wrapper squares">
+      <div>item 1</div>
+      <div>item 2</div>
+      <div>item 3</div>
+      <div>item 4</div>
+      <div>item 5</div>
+      <div>item 6</div>
+      <div>item 7</div>
+      <div>item 8</div>
     </div>
-</div>
+    
+    <div class="horizontal-scroll-wrapper  rectangles">
+      <div>item 1</div>
+      <div>item 2</div>
+      <div>item 3</div>
+      <div>item 4</div>
+      <div>item 5</div>
+      <div>item 6</div>
+      <div>item 7</div>
+      <div>item 8</div>
+    </div>
+
+    
     <script type="text/javascript">
         //draggable command
         $(function(){
