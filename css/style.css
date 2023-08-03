@@ -19,7 +19,6 @@ font-family: sans-serif;
 color: black;
 font-size: 16px;
 line-height: 1.5;
-
 }
 
 h1 {
@@ -48,6 +47,8 @@ pointer-events: none;
 .loaded canvas {
 opacity: 1;
 }
+
+
 
 h2.item{
   margin: 30px;
